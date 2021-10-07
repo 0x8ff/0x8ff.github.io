@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<head>
+    <title>/html/devkitpro.html</title>
+    <link rel="stylesheet" href="/assests/css/blog.css">
+</head>
+
+<h1>Installing devkitPro on an existing Arch Linux install</h1>
+<p>Written on 10/6/2021</p>
+
+<h2>Setting Env Variables</h2>
+<pre>
+DEVKITPRO=/opt/devkitpro
+DEVKITARM=/opt/devkitpro/devkitARM
+DEVKITPPC=/opt/devkitpro/devkitPPC
+</pre>
+
+<h2>Importing the Keys</h2>
+<pre>
+sudo pacman-key --recv BC26F752D25B92CE272E0F44F7FD5492264BB9D0 --keyserver keyserver.ubuntu.com
+sudo pacman-key --lsign BC26F752D25B92CE272E0F44F7FD5492264BB9D0
+</pre>
+
+<h2>Downloading and Installing the Keyring</h2>
+<pre>
+wget https://pkg.devkitpro.org/devkitpro-keyring.pkg.tar.xz
+</pre>
+<p>After running this, install the keyring via this command</p>
+<pre>
+sudo pacman -U devkitpro-keyring.pkg.tar.xz
+</pre>
+
+<h2>Edit /etc/pacman.conf & add the following lines</h2>
+<pre>
+[dkp-libs]
+Server = https://pkg.devkitpro.org/packages
+
+[dkp-linux]
+Server = https://pkg.devkitpro.org/packages/linux/$arch/
+</pre>
+
+<h2>After following the last step, resync the database and update installed packages</h2>
+<pre>
+sudo pacman -Syu
+</pre>
+
+<h2>Congratulations! You have installed devkitPro on your Arch Install!</h2>
+<p>You can now download the development packages via pacman, ex:</p>
+<pre>
+sudo pacman -S 3ds-dev
+</pre>
