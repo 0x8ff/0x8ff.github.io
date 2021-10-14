@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-    <title>/html/devkitpro.html</title>
+    <title>/guides/devkitpro.html</title>
     <link rel="stylesheet" href="/assests/css/blog.css">
 </head>
 
@@ -8,6 +8,7 @@
 <p>Written on 10/6/2021</p>
 
 <h2>Setting Env Variables</h2>
+<p>First things first, type in the following commands onto your terminal:</p>
 <pre>
 DEVKITPRO=/opt/devkitpro
 DEVKITARM=/opt/devkitpro/devkitARM
@@ -15,21 +16,24 @@ DEVKITPPC=/opt/devkitpro/devkitPPC
 </pre>
 
 <h2>Importing the Keys</h2>
+<p>Type in the following commands onto your terminal:</p>
 <pre>
 sudo pacman-key --recv BC26F752D25B92CE272E0F44F7FD5492264BB9D0 --keyserver keyserver.ubuntu.com
 sudo pacman-key --lsign BC26F752D25B92CE272E0F44F7FD5492264BB9D0
 </pre>
 
 <h2>Downloading and Installing the Keyring</h2>
+<html>Download the devkitpro keyring with curl or wget like so:</html>
 <pre>
 wget https://pkg.devkitpro.org/devkitpro-keyring.pkg.tar.xz
 </pre>
-<p>After running this, install the keyring via this command</p>
+<p>After running this, install the keyring via this command:</p>
 <pre>
 sudo pacman -U devkitpro-keyring.pkg.tar.xz
 </pre>
 
-<h2>Edit /etc/pacman.conf & add the following lines</h2>
+<h2>Editing the pacman configuration file</h2>
+<p>Edit /etc/pacman.conf & add the following lines:</p>
 <pre>
 [dkp-libs]
 Server = https://pkg.devkitpro.org/packages
