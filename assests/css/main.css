@@ -3,6 +3,15 @@
     src: url(/assests/fonts/NotoSansJP/NotoSansJP-Regular.otf);
 }
 
+@font-face {
+    font-family: NotoSansJP-Bold;
+    src: url(/assests/fonts/NotoSansJP/NotoSansJP-Bold.otf);
+}
+
+h1 {
+    font-family: NotoSansJP-Bold;
+}
+
 p {
     font-family: NotoSansJP-Regular;
-  }
+}
