@@ -1,0 +1,8 @@
+@font-face {
+    font-family: NotoSansJP-Regular;
+    src: url(/assests/fonts/NotoSansJP/NotoSansJP-Regular.otf);
+}
+
+p {
+    font-family: NotoSansJP-Regular;
+  }
