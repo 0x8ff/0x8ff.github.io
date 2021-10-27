@@ -8,6 +8,10 @@
     src: url(/assests/fonts/NotoSansJP/NotoSansJP-Bold.otf);
 }
 
+.center {
+  text-align: center;
+}
+
 h1 {
     font-family: NotoSansJP-Bold;
 }
