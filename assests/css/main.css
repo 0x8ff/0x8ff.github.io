@@ -8,12 +8,21 @@
     src: url(/assests/fonts/NotoSansJP/NotoSansJP-Bold.otf);
 }
 
+@font-face {
+    font-family: NotoSansJP-Medium;
+    src: url(/assests/fonts/NotoSansJP/NotoSansJP-Medium.otf);
+}
+
 .center {
   text-align: center;
 }
 
 h1 {
     font-family: NotoSansJP-Bold;
+}
+
+h2 {
+    font-family: NotoSansJP-Medium;
 }
 
 p {
